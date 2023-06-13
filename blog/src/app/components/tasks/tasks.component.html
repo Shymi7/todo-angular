@@ -1,0 +1,11 @@
+<div class="w-50 p-4 bg-light">
+  <div *ngFor="let item of items$ | filter : filterText">
+    <blog-item
+      [title]="item.title"
+      [image]="item.imgURL"
+      [text]="item.text"
+      [id]="item.id"
+    >
+    </blog-item>
+  </div>
+</div>

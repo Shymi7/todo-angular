@@ -1,0 +1,11 @@
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #2c3447;
+}
+
+.card-container > div {
+  flex-basis: 33%;
+  padding: 2%;
+  box-sizing: border-box;
+}
