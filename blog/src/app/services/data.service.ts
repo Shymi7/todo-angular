@@ -18,7 +18,7 @@ export class DataService {
   }
 
   getAllFromCurrentUser(){
-    console.log("posts from user: "+this.currentUser.userId);
+    //console.log("posts from user: "+this.currentUser.userId);
     return this.http.get(this.url + '/api/postsFromUser/' + this.currentUser.userId);
   }
 
@@ -30,10 +30,7 @@ export class DataService {
     console.log(postData);
     return this.http.put(this.url + '/api/editPost/' + id, postData);
   }
-  // Metoda .pipe() w Angular służy do łączenia wielu operatorów razem w celu utworzenia łańcucha operacji na obserwowalnym strumieniu.
-  // Każdy operator w łańcuchu wykonuje określone zadanie lub transformację danych emitowanych przez obiekt observable.
-  // tutaj .pipe() służy do łączenia operatorów w łańcuchy i wykonywania dodatkowych akcji po wysłaniu żądania HTTP DELETE.
-  // Operator tap() umożliwia wykonywanie efektów ubocznych lub działań na emitowanych wartościach z observable bez modyfikowania samych wartości.
+
   removePost(id: number) {
     return this.http.delete(this.url + '/api/removePost/' + id).pipe(
       tap(() => {
@@ -45,7 +42,7 @@ export class DataService {
 
   get currentUser() {
     const token = this.getToken();
-    console.log(token);
+    //console.log(token);
     if (!token) {
       return null;
     }

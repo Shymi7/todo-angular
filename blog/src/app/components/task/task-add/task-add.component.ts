@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from 'src/app/services/data.service';
 import { Router } from '@angular/router';
-import { format, toDate } from 'date-fns';
+import {format, parse, toDate} from 'date-fns';
 @Component({
   selector: 'add-post',
   templateUrl: './task-add.component.html',
@@ -18,6 +18,8 @@ export class TaskAddComponent {
   constructor(public dataService: DataService, private router: Router) {}
 
   sendPost() {
+    const parsedDate = parse(this.data.date, 'yyyy-MM-dd', new Date());
+    this.data.date = format(parsedDate, 'dd.MM.yyyy');
     this.dataService.addPost(this.data).subscribe(
       (result) => {
         if (result === null || result === undefined) {

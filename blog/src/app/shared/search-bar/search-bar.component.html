@@ -1,9 +1,12 @@
-<input
-  [(ngModel)]="filterText"
-  (ngModelChange)="sendFilter()"
-  placeholder="Szukaj..."
-  id="search"
-  type="search"
-  class="form-control"
-  textFormat
-/>
+<div class="w-100 d-flex flex-column align-items-center">
+  <input
+    [(ngModel)]="filterText"
+    (ngModelChange)="sendFilter()"
+    placeholder="Szukaj..."
+    id="search"
+    type="search"
+    class="form-control m-4 w-50"
+    textFormat
+  />
+</div>
+

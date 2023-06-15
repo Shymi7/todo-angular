@@ -21,7 +21,7 @@ export class AuthService {
       .pipe(
         map((result: Token | any) => {
           if (result && result.token) {
-            console.log(result);
+            //console.log(result);
             localStorage.setItem('token', result.token);
             return true;
           }
@@ -31,7 +31,7 @@ export class AuthService {
 
   }
   createOrUpdate(credentials: any) {
-    console.log(credentials);
+    //console.log(credentials);
     return this.http.post(this.url + '/user/create', credentials);
   }
 
@@ -57,7 +57,6 @@ export class AuthService {
 
   get currentUser() {
     const token = this.getToken();
-    console.log(token);
     if (!token) {
       return null;
     }

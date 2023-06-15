@@ -10,6 +10,7 @@ export class TaskItemComponent {
   @Input() image?: string;
   @Input() text?: string;
   @Input() id?: number;
+  @Input() date?: string;
   imageLoaded: boolean = false;
 
   ngOnChanges() {

@@ -7,4 +7,5 @@ import { Component, Input } from '@angular/core';
 })
 export class TaskTitleComponent {
   @Input() title?: string;
+  @Input() date?: string;
 }

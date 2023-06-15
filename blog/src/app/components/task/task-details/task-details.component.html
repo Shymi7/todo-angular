@@ -1,11 +1,15 @@
-<figure class="fig">
-  <div class="rowT">
-    <img id="blurred" [src]="image" alt="123" class="profile" />
-    <img id="cover" [src]="image" alt="123" class="profile" />
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">{{ title }}</h5>
+    <p class="card-text">{{ text }}</p>
+    <p class="card-text">
+      <small class="text-muted">
+        Data:
+        {{ date }}
+        (pozostało
+        {{daysLeft}}
+        dni)
+      </small>
+    </p>
   </div>
-  <figcaption>
-    <h6>
-      {{ text }}
-    </h6>
-  </figcaption>
-</figure>
+</div>

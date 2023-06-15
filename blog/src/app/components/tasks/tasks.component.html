@@ -1,10 +1,11 @@
-<div class="w-50 p-4 bg-light">
-  <div *ngFor="let item of items$ | filter : filterText">
+<div class="w-100 d-flex flex-column align-items-center">
+  <div class="w-50" *ngFor="let item of items$ | filter : filterText">
     <blog-item
       [title]="item.title"
       [image]="item.imgURL"
       [text]="item.text"
       [id]="item.id"
+      [date]="item.date"
     >
     </blog-item>
   </div>

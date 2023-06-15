@@ -1,43 +1,47 @@
 <div class="container">
   <form>
-    <div class="form-group">
-      <label for="titleInput">Edit Title:</label>
+    <div class="form-group mt-4">
+      <label for="titleInput">Zmień nazwę zadania:</label>
       <input
         [(ngModel)]="data.title"
         name="title"
         type="text"
         class="form-control"
         id="titleInput"
-        placeholder="Enter title"
+        placeholder="Wpisz nazwę"
         title="Title"
       />
     </div>
-    <div class="form-group">
-      <label for="imageInput">Edit Image:</label>
-      <input
-        [(ngModel)]="data.imgURL"
-        name="imgURL"
-        type="text"
-        class="form-control"
-        id="imageInput"
-        placeholder="Enter image URL"
-        title="ImgURL"
-      />
-    </div>
-    <div class="form-group">
-      <label for="textInput">Edit Text:</label>
+
+    <div class="form-group mt-4">
+      <label for="textInput">Zmień opis zadania:</label>
       <input
         [(ngModel)]="data.text"
         name="text"
         type="text"
         class="form-control"
         id="textInput"
-        placeholder="Enter text"
+        placeholder="Wpisz opis"
         title="Text"
       />
     </div>
-    <button type="submit" (click)="editPost()" class="btn btn-primary">
-      Edit
+
+    <div class="form-group mt-4">
+      <label class="mb-2" for="dateInput">Zmień deadline</label>
+      <input
+        [(ngModel)]="data.date"
+        type="date"
+        id="dateInput"
+        name="trip-start"
+        value="2023-06-16"
+        min="2023-06-16"
+        max="2077-12-31"
+        class="mx-4"
+      />
+    </div>
+
+    <button type="submit" (click)="editPost()" class="btn btn-primary mt-4">
+      Zatwierdź zmiany
     </button>
   </form>
 </div>
